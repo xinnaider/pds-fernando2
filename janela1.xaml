@@ -1,0 +1,37 @@
+﻿<Window x:Class="WpfApp1.janela1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="362" Width="352" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Button x:Name="btClose" Content="X" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top" Width="29" Click="btClose_Click"/>
+        <Label Content="Calculadora" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Background="#FF736F6F" Foreground="White" FontSize="22" FontFamily="Candara" HorizontalContentAlignment="Center" Width="210" FontWeight="Bold"/>
+        <Button x:Name="btCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="250,118,0,0" VerticalAlignment="Top" Height="28" Width="74" Click="btCalcular_Click"/>
+        <TextBox x:Name="txtCalculo2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="37,121,0,0" Height="22"/>
+        <Label Content="x" HorizontalAlignment="Left" Margin="122,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="53" Width="28" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCalculo1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="150,121,0,0" Height="22"/>
+        <Button x:Name="btCalcular2" Content="Calcular" HorizontalAlignment="Left" Margin="250,157,0,0" VerticalAlignment="Top" Height="28" Width="74" Click="btCalcular2_Click"/>
+        <TextBox x:Name="txtCalculo12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="37,160,0,0" Height="22"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="122,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="52" Width="28" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCalculo22" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="150,160,0,0" Height="22"/>
+        <Button x:Name="btCalcular3" Content="Calcular" HorizontalAlignment="Left" Margin="250,195,0,0" VerticalAlignment="Top" Height="28" Width="74" Click="btCalcular3_Click"/>
+        <TextBox x:Name="txtCalculo13" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="37,198,0,0" Height="22"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="122,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="53" Width="28" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCalculo23" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="150,198,0,0" Height="22"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="122,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="52" Width="28" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btCalcular3_Copy" Content="Calcular" HorizontalAlignment="Left" Margin="250,195,0,0" VerticalAlignment="Top" Height="28" Width="74" Click="btCalcular3_Click"/>
+        <TextBox x:Name="txtCalculo13_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="37,198,0,0" Height="22"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="122,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="53" Width="28" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCalculo23_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="150,198,0,0" Height="22"/>
+        <Button x:Name="bt_Calcular4" Content="Calcular" HorizontalAlignment="Left" Margin="250,234,0,0" VerticalAlignment="Top" Height="28" Width="74" Click="btCalcular4_Click"/>
+        <TextBox x:Name="txtCalculo43" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="37,237,0,0" Height="22"/>
+        <Label Content="/&#xD;&#xA;" HorizontalAlignment="Left" Margin="122,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.578" Height="53" Width="28" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCalculo44" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="150,237,0,0" Height="22"/>
+        <Label Content="de números inteiros" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top" Foreground="#FF080808" FontSize="14" FontFamily="Candara" HorizontalContentAlignment="Center" Width="210" FontWeight="Bold" Height="34"/>
+
+    </Grid>
+</Window>
