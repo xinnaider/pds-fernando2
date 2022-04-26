@@ -1,0 +1,136 @@
+﻿<Window x:Class="Escola_pg.Views.EscolaFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Escola_pg.Views"
+        mc:Ignorable="d"
+        Title="EscolaFormWindow" 
+        Height="600" 
+        Width="800"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Cadastro" FontSize="26" Margin="20 20" HorizontalAlignment="Left"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin='20 0'>
+                <Label Content="Informações" FontSize="18"/>
+                <Label Content="Nome"/>
+                <TextBox x:Name="txtNome" Padding="6"/>
+                <Label Content="Razão social"/>
+                <TextBox x:Name="txtRazao" Padding="6"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="20 0">
+                <Label Content="CNPJ" Margin="0 33 0 0"/>
+                <TextBox x:Name="txtCNPJ" Padding="6"/>
+                <Label Content="Insc. Estadual"/>
+                <TextBox x:Name="txtEstadual" Padding="6"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel Margin="20 0">
+                <Label Content="Informação Complementares" FontSize="18"/>
+                <Label Content="Tipo" FontSize="14"/>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="rdFator" GroupName="RDTipo">Privada</RadioButton>
+                    <RadioButton GroupName="RDTipo" Margin="20 0 0 0">Pública</RadioButton>
+                </StackPanel>
+                <Label Content="Data de criação"/>
+                <DatePicker x:Name="dtCriacao" Padding="6"/>
+                <Label Content="Responsável" FontSize="18"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nome" Margin="10 0"/>
+                    <Label Content="Telefone" Margin="140 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtNome2" Padding="6" Margin="5 0 30 0" Width="160"/>
+                    <TextBox x:Name="txtTelefone2" Padding="6" Width="160"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Label Content="Endereço e Contato" FontSize="18"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Telefone"/>
+                    <Label Content="E-mail" Margin="136 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtTelefone3" Padding="6" Margin="5 0 30 0" Width="160"/>
+                    <TextBox x:Name="txtEmail" Padding="6" Width="160"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Rua"/>
+                    <Label Content="Nº" Margin="160 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtRua" Padding="6" Margin="5 0 30 0" Width="160"/>
+                    <TextBox x:Name="txtN" Padding="6" Width="160"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Bairro"/>
+                    <Label Content="Complemento" Margin="150 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtBairro" Padding="6" Margin="5 0 30 0" Width="160"/>
+                    <TextBox x:Name="txtComp" Padding="6" Width="160"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="CEP"/>
+                    <Label Content="Cidade" Margin="95 0"/>
+                    <Label Content="Estado" Margin="-10 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtCEP" Padding="6" Margin="5 0 30 0" Width="90"/>
+                    <TextBox x:Name="txtCidade" Padding="6" Width="90" Margin="5 0 30 0"/>
+                    <ComboBox x:Name="cboxEstado" Padding="6" Margin="10 0 0 0" Width="90">
+                        <ComboBoxItem>Acre (AC)</ComboBoxItem>
+                        <ComboBoxItem>Alagoas (AL)</ComboBoxItem>
+                        <ComboBoxItem>Amapá (AP)</ComboBoxItem>
+                        <ComboBoxItem>Amazonas (AM)</ComboBoxItem>
+                        <ComboBoxItem>Bahia (BA)</ComboBoxItem>
+                        <ComboBoxItem>Ceará (CE)</ComboBoxItem>
+                        <ComboBoxItem>Distrito Federal (DS)</ComboBoxItem>
+                        <ComboBoxItem>Espírito Santo (ES)</ComboBoxItem>
+                        <ComboBoxItem>Goiás (GO)</ComboBoxItem>
+                        <ComboBoxItem>Maranhão (MA)</ComboBoxItem>
+                        <ComboBoxItem>Mato Grosso (MT)</ComboBoxItem>
+                        <ComboBoxItem>Minas Gerais (MG)</ComboBoxItem>
+                        <ComboBoxItem>Paraná (PR)</ComboBoxItem>
+                        <ComboBoxItem>Paraíba (PB)</ComboBoxItem>
+                        <ComboBoxItem>Pará (PA)</ComboBoxItem>
+                        <ComboBoxItem>Pernambuco (PE)</ComboBoxItem>
+                        <ComboBoxItem>Piauí (PI)</ComboBoxItem>
+                        <ComboBoxItem>Rio Grande do Norte (RN)</ComboBoxItem>
+                        <ComboBoxItem>Rio Grande do Sul (RS)</ComboBoxItem>
+                        <ComboBoxItem>Rio de Janeiro (RJ)</ComboBoxItem>
+                        <ComboBoxItem>Rondônia (RO)</ComboBoxItem>
+                        <ComboBoxItem>Roraima (RR)</ComboBoxItem>
+                        <ComboBoxItem>Santa Catarina (SC)</ComboBoxItem>
+                        <ComboBoxItem>Sergipe (SE)</ComboBoxItem>
+                        <ComboBoxItem>São Paulo (SP)</ComboBoxItem>
+                        <ComboBoxItem>Tocantins (TO)</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Button x:Name="btSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="660,290,0,0" VerticalAlignment="Top" Width="116" Click="btSalvar_Click" Grid.Row="2" Height="35"/>
+        <Button x:Name="btClose" Content="X" HorizontalAlignment="Left" Margin="761,10,0,0" VerticalAlignment="Top" Width="29" Click="btClose_Click"/>
+    </Grid>
+</Window>

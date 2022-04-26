@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Escola_pg.Views;
 
-namespace WpfApp1
+namespace Escola_pg
 {
     /// <summary>
     /// Interação lógica para MainWindow.xam
@@ -23,36 +24,11 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+            var form = new EscolaFormWindow();
+            form.Show();
+
             this.Close();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            string usuario = txtUsuario.Text;
-            string senha = passBoxSenha.Password.ToString();
-
-            if (usuario == "Fernando" && senha == "123")
-            {
-                MessageBox.Show("Usuário autênticado com sucesso");
-                selecao principal = new selecao();
-                principal.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha incorreto", "Aviso", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-        }
-
-        private void OnKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                Button_Click_1(sender, e);
-            }
         }
     }
 }
