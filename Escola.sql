@@ -20,3 +20,11 @@ complemento_esc varchar(300) not null,
 cidade_esc varchar(300) not null,
 estado_esc varchar(300) not null
 );
+
+create table Curso(
+id_cur int primary key auto_increment,
+nome_cur varchar(300),
+cargaH_cur varchar(300),
+turno_cur varchar(300),
+descricao_cur varchar(300)
+);

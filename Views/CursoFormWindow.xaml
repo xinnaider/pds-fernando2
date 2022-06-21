@@ -62,7 +62,7 @@
             </StackPanel>
 
         </Grid>
-        <Button x:Name="btSalvarCur" Content="Salvar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="502" Click="btSalvarCur_Click"/>
+        <Button x:Name="btSalvarCur" Content="Salvar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="502" Click="btSalvarCur_Click" Background="#FF7D7D7D" BorderBrush="#FF7D7D7D"/>
 
 
 

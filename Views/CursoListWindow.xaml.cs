@@ -41,5 +41,62 @@ namespace ProjetoEscola.Views
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var cursoSelecionada = dataGridCurso.SelectedItem as Curso;
+            var resultado = MessageBox.Show($"Deseja realmente atualizar os dados de curso '{cursoSelecionada.NomeCurso}' ?", "Confirmação de alteração",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            var form = new CursoFormWindow(cursoSelecionada);
+            form.ShowDialog();
+
+            CarregarListagem();
+        }
+
+        private void Button_Remover_Click(object sender, RoutedEventArgs e)
+        {
+            var cursoSelecionada = dataGridCurso.SelectedItem as Curso;
+
+            var resultado = MessageBox.Show($"Deseja realmente remover o curso '{cursoSelecionada.NomeCurso}' ?", "Confirmação de Exclusão",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+
+                    var dao = new CursoDAO();
+                    dao.Delete(cursoSelecionada);
+
+                    MessageBox.Show("Registro removido com sucesso!");
+                    CarregarListagem();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new CursoDAO();
+                List<Curso> listaCurso = dao.List();
+
+                dataGridCurso.ItemsSource = listaCurso;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

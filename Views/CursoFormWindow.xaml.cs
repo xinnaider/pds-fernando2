@@ -29,6 +29,35 @@ namespace ProjetoEscola.Views
             InitializeComponent();
         }
 
+        public CursoFormWindow(Curso cursoSelecionada)
+        {
+            InitializeComponent();
+            Loaded += CursoFormWindow_Loaded;
+            _curso = cursoSelecionada;
+        }
+
+        private void CursoFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNomeCurso.Text = _curso.NomeCurso;
+            txtCargaH.Text = _curso.CargaH;
+            txtDescricao.Text = _curso.Descricao;
+
+            if (_curso.Turno == "Natutino")
+            {
+                rdMatutino.IsChecked = true;
+            }
+            if (_curso.Turno == "Vespertino")
+            {
+                rdVespet.IsChecked = true;
+            }
+            if (_curso.Turno == "Noturno")
+            {
+                rdNoturno.IsChecked = true;
+            }
+
+
+
+        }
 
         private void btSalvarCur_Click(object sender, RoutedEventArgs e)
         {
@@ -36,9 +65,6 @@ namespace ProjetoEscola.Views
             _curso.CargaH = txtCargaH.Text;
  
             _curso.Descricao = txtDescricao.Text;
-
-
-            
 
             if ((bool)rdMatutino.IsChecked)
             {
@@ -53,20 +79,32 @@ namespace ProjetoEscola.Views
                 _curso.Turno = "Noturno";
             }
 
-
+            var dao = new CursoDAO();
 
             try
             {
-                var dao = new CursoDAO();
-                dao.Insert(_curso);
+                if (_curso.Id > 0)
+                {
+                    dao.Update(_curso);
 
-                MessageBox.Show("Registro de escola cadastrado com sucesso.");
+                    MessageBox.Show("Registro de escola cadastrado com sucesso.");
+                }
+                else
+                {
+                    dao.Insert(_curso);
+
+                    MessageBox.Show("Registro de escola cadastrado com sucesso.");
+                }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+
         }
+
+
     }
 }

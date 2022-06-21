@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoEscola"
         mc:Ignorable="d"
-        Title="Login" Height="230" Width="420">
-    <Grid>
-        <Button Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="33,23,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click"/>
-        <Button Content="Listar Curso" HorizontalAlignment="Left" Margin="33,113,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_2"/>
-        <Button Content="Cadastrar Escola" HorizontalAlignment="Left" Margin="217,23,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_1"/>
-        <Button Content="Listar Escola" HorizontalAlignment="Left" Margin="217,113,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_3"/>
+        Title="Login" Height="500   " Width="420">
+    <Grid Background="AntiqueWhite">
+        <Button Content="Cadastrar Curso" HorizontalAlignment="Stretch" Margin="0,132,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click" Background="#FF7D7D7D"/>
+        <Button Content="Listar Curso" HorizontalAlignment="Stretch" Margin="0,187,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_2" Background="#FF7D7D7D"/>
+        <Button Content="Cadastrar Escola" HorizontalAlignment="Stretch" Margin="0,297,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_1" Background="#FF7D7D7D"/>
+        <Button Content="Listar Escola" HorizontalAlignment="Stretch" Margin="0,242,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click_3" Background="#FF7D7D7D"/>
+        <Label Content="Sistema Escola&#xD;&#xA;" HorizontalAlignment="Stretch" Margin="0,65,0,0" VerticalAlignment="Top" Width="150" FontSize="20" FontWeight="Bold"/>
 
     </Grid>
 </Window>

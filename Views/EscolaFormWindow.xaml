@@ -162,6 +162,6 @@
         
         
         
-        <Button Grid.Row="2" Content="Salvar" Click="Button_Click" Margin="10,9" />
+        <Button Grid.Row="2" Content="Salvar" Click="Button_Click" Margin="10,9" Background="#FF7D7D7D" />
     </Grid>
 </Window>

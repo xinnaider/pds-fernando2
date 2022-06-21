@@ -66,7 +66,61 @@ namespace ProjetoEscola.Models
                     lista.Add(curso);
                 }
 
+                reader.Close();
                 return lista;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Delete(Curso curso)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "DELETE FROM Curso WHERE (id_cur = @id)";
+
+                comando.Parameters.AddWithValue("@id", curso.Id);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao deletar as informações");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void Update(Curso curso)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "update Curso set " + " nome_cur = @nome, cargaH_cur = @cargaH, turno_cur = @turno, descricao_cur = @descricao" + " where id_cur = @id";
+
+                comando.Parameters.AddWithValue("@id", curso.Id);
+                comando.Parameters.AddWithValue("@nome", curso.NomeCurso);
+                comando.Parameters.AddWithValue("@cargaH", curso.CargaH);
+                comando.Parameters.AddWithValue("@turno", curso.Turno);
+                comando.Parameters.AddWithValue("@descricao", curso.Descricao);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações");
+                }
 
             }
             catch (Exception ex)
