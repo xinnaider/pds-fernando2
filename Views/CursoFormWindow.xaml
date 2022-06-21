@@ -1,0 +1,72 @@
+﻿<Window x:Class="ProjetoEscola.Views.CursoFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoEscola.Views"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="CursoFormWindow" Height="480.938" Width="530.000">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Cadastro de Curso" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="1" Background="AntiqueWhite">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="15">
+                <Label Content="Informações de Registro do Curso" FontSize="20"/>
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Nome do Curso"
+                    x:Name="txtNomeCurso" Padding="8" RenderTransformOrigin="0.302,0.477" Margin="0,0,68,0"/>
+
+                <!--<Label Content="Nome do Curso" FontSize="16"/>-->
+
+
+
+                <Label Content="Carga Horária" FontSize="16"/>
+                <TextBox x:Name="txtCargaH" Padding="8"/>
+
+                <Label Content="Descrição" FontSize="16"/>
+                <TextBox x:Name="txtDescricao" Padding="8" Height="54"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="rdMatutino" GroupName="rdTurno" FontSize="16" Margin="10 0 50 0">Matutino</RadioButton>
+                    <RadioButton x:Name="rdVespet" GroupName="rdTurno" FontSize="16" Margin="10 0 50 0" Height="23">Vespertino</RadioButton>
+                    <RadioButton x:Name="rdNoturno" GroupName="rdTurno" FontSize="16" Width="97">Noturno</RadioButton>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+        <Button x:Name="btSalvarCur" Content="Salvar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="502" Click="btSalvarCur_Click"/>
+
+
+
+        <!--<Button Grid.Row="2" Content="Salvar" Click="Button_Click" x:Name="btSalvarCur"/>-->
+    </Grid>
+
+</Window>
